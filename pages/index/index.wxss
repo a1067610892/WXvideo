@@ -1,0 +1,102 @@
+.Home {
+  width: 100%;
+  height: 100%;
+}
+.Home .header {
+  width: 750rpx;
+  height: 60rpx;
+  text-align: center;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background: #FFF;
+  padding-bottom: 10rpx;
+}
+.Home .header .nav {
+  width: 20%;
+  height: 100%;
+  line-height: 60rpx;
+  font-size: 24rpx;
+}
+.Home .header .header-input {
+  width: 80%;
+  height: 58rpx;
+  margin-right: 20rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 15rpx;
+  font-size: 24rpx;
+  color: #ccc;
+}
+.Home .head-nav {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  border-bottom: 1rpx solid #eee;
+  position: fixed;
+  top: 70rpx;
+  z-index: 999;
+  background: #FFF;
+}
+.Home .head-nav .head-block {
+  flex: 1;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  color: #ccc;
+}
+.Home .head-nav .active {
+  color: black;
+  border-bottom: 1rpx solid black;
+}
+.Home .layout {
+  flex-direction:column;
+  display: flex;
+}
+.Home .layout .box {
+  width: 750rpx;
+  height: 300rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.Home .layout .box .item-left {
+  width: 300rpx;
+  height: 300rpx;
+  float: left;
+}
+.Home .layout .box .item-left .item-img {
+  width: 260rpx;
+  height: 260rpx;
+  margin: 20rpx 20rpx;
+  border-radius: 15rpx;
+}
+.Home .layout .box .item-center {
+  float: left;
+  margin-top: 20rpx;
+  width: 280rpx;
+  height: 280rpx;
+}
+.Home .layout .box .item-center .item-title {
+  font-size: 32rpx;
+  color: black;
+}
+.Home .layout .box .item-right {
+  width: 150rpx;
+  height: 300rpx;
+  float: left;
+}
+.Home .layout .box .item-right .item-font {
+  margin-top: 70rpx;
+  display: block;
+  font-size: 24rpx;
+  text-align: center;
+  color: #f48787;
+}
+.Home .layout .box .item-right .item-btn {
+  width: 150rpx;
+  height: 60rpx;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  background: #FFF;
+  color: #f48787;
+  border: 1rpx solid #f48787;
+}

@@ -1,0 +1,27 @@
+<view class='Home'>
+  <view class='header'>
+    <nav class="nav">北京</nav>
+    <input class='header-input' value='电影 / 电视剧 / 影人' />
+  </view>
+  <view class='head-nav'>
+    <nav catchtap="switch" data-current="0" class="head-block {{indexId == 0 ? 'active' : ''}}">正在上映</nav>
+    <nav catchtap="switch" data-current="1" class="head-block {{indexId == 1 ? 'active' : ''}}">即将上映</nav>
+  </view>
+  <swiper style='margin-top:144rpx;height:{{listHeight}}' bindchange="slide" current='{{indexId}}'>
+    <swiper-item class="layout">
+      <view class='box' wx:for="{{array}}" wx:key="{{index}}">
+        <view class='item-left'>
+          <image class='item-img' src='{{item.images.large}}'></image>
+        </view>
+        <view class='item-center'>
+          <h1 class="item-title">{{item.title}}</h1>
+        </view>
+        <view class='item-right'>
+          <text class='item-font'>{{item.collect_count}}人看过</text>
+          <button class='item-btn'>购票</button>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>暂无数据</swiper-item>
+  </swiper>
+</view>
