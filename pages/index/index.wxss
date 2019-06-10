@@ -69,6 +69,9 @@
   margin: 20rpx 20rpx;
   border-radius: 15rpx;
 }
+.Home .layout .box:last-child {
+  margin-bottom: 20rpx;
+}
 .Home .layout .box .item-center {
   float: left;
   margin-top: 20rpx;
@@ -78,6 +81,23 @@
 .Home .layout .box .item-center .item-title {
   font-size: 32rpx;
   color: black;
+}
+.Home .layout .box .item-center .item-directors {
+  width: 100%;
+  height: 60rpx;
+}
+.Home .layout .box .item-center .item-directors .text {
+  font-size: 24rpx;
+  line-height: 60rpx;
+  color: #ccc;
+}
+.Home .layout .box .item-center .item-casts {
+  width: 100%;
+  line-height: 30rpx;
+}
+.Home .layout .box .item-center .item-casts .casts-text {
+  font-size: 24rpx;
+  color: #ccc;
 }
 .Home .layout .box .item-right {
   width: 150rpx;

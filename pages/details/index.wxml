@@ -1,0 +1,39 @@
+<view>
+  <view class='details'>
+    <image class='details-img' src='{{array.images.large}}'></image>
+  </view>
+  <view class='details-box'>
+    <view class='details-left'>
+      <h1 class="details-title">{{array.title}}</h1>
+      <view class='details-type'>
+        <text>{{array.year}}</text>
+        <text wx:for='{{array.genres}}' wx:key="{{index}}"><text> / </text>{{item}}</text>
+      </view>
+      <view class='details-type'>
+        <text>原名：</text>
+        <text>{{array.original_title}}</text>
+      </view>
+      <view class='details-type'>
+        <text>上映时间：</text>
+        <text>{{array.pubdates[0]}}</text>
+      </view>
+      <view class='details-type'>
+        <text>片长：</text>
+        <text>{{array.durations[0]}}</text>
+      </view>
+    </view>
+    <view class='details-right'>
+      <view class='right-box'>
+        <h2 class="right-title">豆瓣评分</h2>
+        <text class='right-font' wx:if="{{array.rating.average != 0}}">{{array.rating.average}}</text>
+        <text class='right-font' wx:else>暂无评分</text>
+        <text class='right-num'>{{array.collect_count}}人</text>
+      </view>
+    </view>
+  </view>
+  <view class='introduce'>
+    <h3 class="introduce-title">简介</h3>
+    <p class="paragraph {{Receive == 0 ? 'receive' : ''}}">{{array.summary}}</p>
+    <text wx:if="{{Receive == 0}}" catchtap="Open" class='open'>展开</text>
+  </view>
+</view>

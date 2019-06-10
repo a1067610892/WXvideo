@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/my/index",
-    "pages/lookup/index"
+    "pages/lookup/index",
+    "pages/details/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FFF",

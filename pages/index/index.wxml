@@ -9,12 +9,16 @@
   </view>
   <swiper style='margin-top:144rpx;height:{{listHeight}}' bindchange="slide" current='{{indexId}}'>
     <swiper-item class="layout">
-      <view class='box' wx:for="{{array}}" wx:key="{{index}}">
+      <view class='box' catchtap="getInto" data-id="{{item.id}}"  wx:for="{{array}}" wx:key="{{index}}">
         <view class='item-left'>
           <image class='item-img' src='{{item.images.large}}'></image>
         </view>
         <view class='item-center'>
           <h1 class="item-title">{{item.title}}</h1>
+          <view class='item-directors'><text class='text'>导演：</text><text class='text'>{{item.directors[0].name}}</text></view>
+          <view class='item-casts' wx:if="{{item.casts.length != 0}}">
+            <text class='casts-text'>演员：</text><text wx:key="listIndex" wx:for="{{item.casts}}" wx:for-item="list" wx:for-index="listIndex" class='casts-text'>{{list.name}}<text  class='casts-text' wx:if='{{listIndex + 1 != item.casts.length}}'> / </text></text>
+          </view>
         </view>
         <view class='item-right'>
           <text class='item-font'>{{item.collect_count}}人看过</text>

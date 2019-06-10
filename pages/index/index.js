@@ -35,11 +35,7 @@ Page({
       },
       success(res) {
         console.log(res.data)
-        for (let i = 0; i < res.data.subjects.length; i++) {
-          if (res.data.subjects[i].collect_count > 10000) {
-            res.data.subjects[i].collect_count = ((res.data.subjects[i].collect_count / 10000).toFixed(2).slice(0, -1)) + '万'
-          }
-        }
+        _this.num(res.data.subjects)
         _this.setData({
           array: res.data.subjects
         })
@@ -62,10 +58,24 @@ Page({
    */
   onReady: function () {
   },
+  /* 把观看人数超过万的简化 */
+  num (arr) {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].collect_count > 10000) {
+        arr[i].collect_count = ((arr[i].collect_count / 10000).toFixed(2).slice(0, -1)) + '万'
+      }
+    }
+  },
   /* 动态计算swiper组件的高度 */
   swiperHeight () {
     this.setData({
-      listHeight: (200 * this.data.array.length) + 'rpx'
+      listHeight: (302 * this.data.array.length) + 'rpx'
+    })
+  },
+  getInto (e) {
+    let event = e.currentTarget.dataset.id
+    wx.navigateTo ({
+      url: '../details/index?itemId=' + event
     })
   },
   /**
