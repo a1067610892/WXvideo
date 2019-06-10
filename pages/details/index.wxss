@@ -107,3 +107,87 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
+.comment {
+  width: 710rpx;
+  background: #eee;
+  padding: 20rpx 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.comment .comment-nav {
+  text-align: center;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: block;
+}
+.comment .comment-head {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.comment .comment-head .comment-title {
+  display: inline-block;
+  font-size: 24rpx;
+  height: 100%;
+  line-height: 80rpx;
+}
+.comment .comment-head .comment-btn {
+  width: 160rpx;
+  height: 60rpx;
+  border: 1rpx solid #179717;
+  color: #179717;
+  background: #FFF;
+  display: inline-block;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  float: right;
+  margin-top: 10rpx;
+}
+.comment .comment-box {
+  width: 710rpx;
+  height: 100%;
+  background: #eee;
+}
+.comment .comment-box .list {
+  width: 710rpx;
+  background: #eee;
+  margin-top: 20rpx;
+}
+.comment .comment-box .list .comment-left {
+  width: 100rpx;
+  display: inline-block;
+  float: left;
+}
+.comment .comment-box .list .comment-left .comment-img {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 60rpx;
+  background: #eee;
+}
+.comment .comment-box .list .comment-right {
+  width: 610rpx;
+  background: #eee;
+  display: inline-block;
+}
+.comment .comment-box .list .comment-right .comment-right-head {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+}
+.comment .comment-box .list .comment-right .right-text {
+  font-size: 24rpx;
+}
+.comment .comment-box .list .comment-right .comment-footer {
+  font-size: 24rpx;
+  color: #ccc;
+  margin-top: 10rpx;
+}
+.comment .footer-btn {
+  color: #179717;
+  font-size: 28rpx;
+  background: #eee;
+}
+.comment .footer-btn::after {
+  border: none;
+}

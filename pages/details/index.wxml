@@ -36,4 +36,29 @@
     <p class="paragraph {{Receive == 0 ? 'receive' : ''}}">{{array.summary}}</p>
     <text wx:if="{{Receive == 0}}" catchtap="Open" class='open'>展开</text>
   </view>
+  <view class='comment'>
+    <nav class="comment-nav">评论</nav>
+    <view class='comment-head'>
+      <text class='comment-title'>短评</text>
+      <button class='comment-btn'>写短评</button>
+    </view>
+    <view class='comment-box'>
+      <view class='list' wx:for="{{commentArr}}" wx:key="{{index}}" wx:if='{{index < 4}}'>
+        <view class='comment-left'>
+          <image class='comment-img' src='{{item.author.avatar}}'></image>
+        </view>
+        <view class='comment-right'>
+          <view class='comment-right-head'>
+            <text style='float:left;'>{{item.author.name}}</text>
+            <text style='float:right;'>{{item.useful_count}}</text>
+          </view>
+          <text class='right-text'>{{item.content}}</text>
+          <view class='comment-footer'>
+            <text>{{item.created_at}}</text>
+          </view>
+        </view>
+      </view>
+      <button class='footer-btn'>全部短评{{commentArr.length}}个</button>
+    </view>
+  </view>
 </view>

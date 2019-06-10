@@ -6,7 +6,8 @@ Page({
    */
   data: {
     array: [],
-    Receive: 0
+    Receive: 0,
+    commentArr: []
   },
 
   /**
@@ -36,11 +37,33 @@ Page({
         console.log(err)
       }
     })
+    wx.request({
+      url: 'http://api.douban.com/v2/movie/subject/' + id +'/comments?apikey=0b2bdeda43b5688921839c8ecb20399b',
+      method: 'GET',
+      header: {
+        "Content-Type": "json"
+      },
+      success(res) {
+        _this.shortDate(res.data.comments)
+        _this.setData({
+          commentArr: res.data.comments
+        })
+        console.log(res.data)
+      },
+      fail(err) {
+        console.log(err)
+      }
+    })
   },
   Open () {
     this.setData({
       Receive: 1
     })
+  },
+  shortDate (arr) {
+    for (let i = 0; i < 4; i++) {
+      arr[i].created_at = (new Date(arr[i].created_at).getMonth() + 1) + '月' + (new Date(arr[i].created_at).getDate()) + '日'
+    }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
